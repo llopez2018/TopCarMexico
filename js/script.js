@@ -963,7 +963,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </a>
     </div>
     <div class="card-body" style="background: linear-gradient(to bottom, #67666B, #031A1C);">
-      <h5 class="card-title" style="background: linear-gradient(to right, red, blue); -webkit-background-clip: text; color: transparent;">${car.description_name}</h5>
+      <h4 class="card-title" style="background: linear-gradient(to right, red, red); -webkit-background-clip: text; color: transparent; ">${car.description_name}</h4>
       <p class="card-text text-white"><strong>Estado:</strong> ${car.estado}</p>
       <p class="card-text text-white"><strong>Inventario:</strong> ${car.inventario}</p>
       <p class="card-text text-white"><strong>Kilometraje:</strong> ${car.kilometraje}</p>

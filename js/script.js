@@ -944,34 +944,36 @@ document.addEventListener("DOMContentLoaded", function () {
         const card = document.createElement("div");
         card.className = "col-md-4 car-card";
         card.innerHTML = `
-        <div class="card shadow-lg" style="background: linear-gradient(to bottom, #FF5733, #FFC300); border-radius: 10px;">
-          <div id="${carouselId}" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              ${car.images.map((image, index) => `
-                <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                  <img src="img/${car.name}/${image}" class="d-block w-100" alt="${car.name} ${index + 1}" style="border-radius: 10px 10px 0 0;">
-                </div>
-              `).join('')}
-            </div>
-            <a class="carousel-control-prev" href="#${carouselId}" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#${carouselId}" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+  <div class="card shadow-lg" style="background: linear-gradient(to bottom, #FF5733, #FFC300); border-radius: 10px; border: 2px solid #ccc;">
+    <div id="${carouselId}" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        ${car.images.map((image, index) => `
+          <div class="carousel-item ${index === 0 ? 'active' : ''}">
+            <img src="img/${car.name}/${image}" class="d-block w-100" alt="${car.name} ${index + 1}" style="border-radius: 10px 10px 0 0;">
           </div>
-          <div class="card-body">
-        <h5 class="card-title text-white">${car.description_name}</h5>
-        <p class="card-text text-white"><strong>Estado:</strong> ${car.estado}</p>
-        <p class="card-text text-white"><strong>Inventario:</strong> ${car.inventario}</p>
-        <p class="card-text text-white"><strong>Kilometraje:</strong> ${car.kilometraje}</p>
-        <p class="card-text text-white"><strong>Precio:</strong> ${car.precio}</p>
-        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#carDetailsModal" data-car='${JSON.stringify(car)}'>Ver Detalles</a>
+        `).join('')}
       </div>
-        </div>
-      `;
+      <a class="carousel-control-prev" href="#${carouselId}" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#${carouselId}" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="card-body" style="background: linear-gradient(to bottom, #67666B, #031A1C);">
+      <h5 class="card-title" style="background: linear-gradient(to right, red, blue); -webkit-background-clip: text; color: transparent;">${car.description_name}</h5>
+      <p class="card-text text-white"><strong>Estado:</strong> ${car.estado}</p>
+      <p class="card-text text-white"><strong>Inventario:</strong> ${car.inventario}</p>
+      <p class="card-text text-white"><strong>Kilometraje:</strong> ${car.kilometraje}</p>
+      <p class="card-text text-white"><strong>Precio:</strong> ${car.precio}</p>
+      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#carDetailsModal" data-car='${JSON.stringify(car)}'>Ver Detalles</a>
+    </div>
+  </div>
+`;
+
+
         carContainer.appendChild(card);
     });
 

@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
             estado: "Seminuevo",
             inventario: "Disponible",
             kilometraje: "105,000 km",
-            precio: "$59,900 MXN",
+            precio: "140,000 MXN",
             images: [
                 "WhatsApp Image 2024-06-13 at 11.19.05 PM.jpeg",
                 "WhatsApp Image 2024-06-13 at 11.19.06 PM.jpeg",
@@ -310,7 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Denali yukon",
-            description_name: "GMC Yukon Denali 2019",
+            description_name: "GMC Yukon Denali 2019 ",
             description_vehiculo: `
     <strong>Descripción detallada de la GMC Yukon Denali 2019:</strong><br><br>
     <strong>Exterior:</strong><br>
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", function () {
     - Sistema de visión nocturna<br>
     - Asistente de estacionamiento automático
 `,
-            estado: "Seminuevo",
+            estado: "Siniestrada por Reparar (Arrancando y Caminando)",
             inventario: "Disponible",
             kilometraje: "42,000 km",
             precio: "$480,000 MXN",
@@ -632,10 +632,51 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Mazda 2",
+            description_name: "Mazda 2 2022",
+            description_vehiculo: `
+        <strong>Descripción detallada del Mazda 2 2022:</strong><br><br>
+        <strong>Exterior:</strong><br>
+        - Diseño compacto y moderno con parrilla distintiva de Mazda<br>
+        - Faros delanteros LED y luces diurnas LED<br>
+        - Rines de aluminio de 15 pulgadas (opcional en 16 pulgadas)<br>
+        - Vidrios tintados<br>
+        - Espejos laterales eléctricos con desempañador<br>
+        - Manijas de las puertas del color de la carrocería<br><br>
+        <strong>Interior:</strong><br>
+        - Espacio cómodo para hasta 5 pasajeros<br>
+        - Asientos delanteros con ajuste manual<br>
+        - Tapicería de tela de alta calidad<br>
+        - Volante multifunción revestido en piel con controles de audio y velocidad crucero<br>
+        - Sistema de infoentretenimiento Mazda Connect con pantalla táctil de 7 pulgadas, Apple CarPlay, Android Auto y Bluetooth<br>
+        - Aire acondicionado automático<br>
+        - Sistema de audio de 6 bocinas<br><br>
+        <strong>Seguridad:</strong><br>
+        - Seis bolsas de aire: dos frontales, dos laterales y dos de cortina<br>
+        - Frenos ABS con distribución electrónica de frenado (EBD) y asistencia de frenado de emergencia (BA)<br>
+        - Control de estabilidad DSC<br>
+        - Control de tracción TCS<br>
+        - Sistema de alerta de presión de neumáticos<br>
+        - Cámara de visión trasera<br>
+        - Sensores de estacionamiento traseros (opcional)<br><br>
+        <strong>Motor:</strong><br>
+        - Motor de 4 cilindros y 1.5 litros<br>
+        - Potencia de 110 caballos de fuerza y 104 libras-pie de torque<br>
+        - Transmisión manual de 6 velocidades o automática de 6 velocidades<br>
+        - Tracción delantera<br><br>
+        <strong>Equipamiento adicional (dependiendo la versión):</strong><br>
+        - Sistema de navegación GPS<br>
+        - Asientos delanteros con calefacción<br>
+        - Volante con calefacción<br>
+        - Sistema de sonido premium Bose con 7 bocinas<br>
+        - Rines de aluminio de 16 pulgadas<br>
+        - Suspensión deportiva<br>
+        - Faros antiniebla<br>
+        - Control de crucero adaptativo
+        `,
             estado: "Seminuevo",
             inventario: "Disponible",
             kilometraje: "105,000 km",
-            precio: "$59,900 MXN",
+            precio: "$215,900 MXN",
             images: [
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (41).jpeg",
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (42).jpeg",
@@ -944,36 +985,34 @@ document.addEventListener("DOMContentLoaded", function () {
         const card = document.createElement("div");
         card.className = "col-md-4 car-card";
         card.innerHTML = `
-  <div class="card shadow-lg" style="background: linear-gradient(to bottom, #FF5733, #FFC300); border-radius: 10px; border: 2px solid #ccc;">
-    <div id="${carouselId}" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        ${car.images.map((image, index) => `
-          <div class="carousel-item ${index === 0 ? 'active' : ''}">
-            <img src="img/${car.name}/${image}" class="d-block w-100" alt="${car.name} ${index + 1}" style="border-radius: 10px 10px 0 0;">
-          </div>
-        `).join('')}
-      </div>
-      <a class="carousel-control-prev" href="#${carouselId}" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#${carouselId}" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    <div class="card-body" style="background: linear-gradient(to bottom, #67666B, #031A1C);">
-      <h4 class="card-title" style="background: linear-gradient(to right, red, red); -webkit-background-clip: text; color: transparent; ">${car.description_name}</h4>
-      <p class="card-text text-white"><strong>Estado:</strong> ${car.estado}</p>
-      <p class="card-text text-white"><strong>Inventario:</strong> ${car.inventario}</p>
-      <p class="card-text text-white"><strong>Kilometraje:</strong> ${car.kilometraje}</p>
-      <p class="card-text text-white"><strong>Precio:</strong> ${car.precio}</p>
-      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#carDetailsModal" data-car='${JSON.stringify(car)}'>Ver Detalles</a>
-    </div>
-  </div>
-`;
-
-
+            <div class="card shadow-lg" style="background: linear-gradient(to bottom, #FF5733, #FFC300); border-radius: 10px; border: 2px solid #ccc;">
+                <div id="${carouselId}" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        ${car.images.map((image, index) => `
+                            <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                                <img src="img/${car.name}/${image}" class="d-block w-100" alt="${car.name} ${index + 1}" style="border-radius: 10px 10px 0 0;">
+                            </div>
+                        `).join('')}
+                    </div>
+                    <a class="carousel-control-prev" href="#${carouselId}" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#${carouselId}" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="card-body" style="background: linear-gradient(to bottom, #67666B, #031A1C);">
+                    <h4 class="card-title" style="background: linear-gradient(to right, red, red); -webkit-background-clip: text; color: transparent; ">${car.description_name}</h4>
+                    <p class="card-text text-white"><strong>Estado:</strong> ${car.estado}</p>
+                    <p class="card-text text-white"><strong>Inventario:</strong> ${car.inventario}</p>
+                    <p class="card-text text-white"><strong>Kilometraje:</strong> ${car.kilometraje}</p>
+                    <p class="card-text text-white"><strong>Precio:</strong> ${car.precio}</p>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#carDetailsModal" data-car='${JSON.stringify(car)}'>Ver Detalles</a>
+                </div>
+            </div>
+        `;
         carContainer.appendChild(card);
     });
 
@@ -985,7 +1024,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.find('#carName').text(car.description_name);
         modal.find('#carDescription').html(car.description_vehiculo);
 
-        const carImages = modal.find('#carImages');
+        const carImages = modal.find('.carousel-inner');
         carImages.empty(); // Limpia las imágenes anteriores
 
         car.images.forEach((image, index) => {
@@ -996,5 +1035,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             `);
         });
+    });
+
+    // Inicializa el mapa de Google Maps
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 20.967, lng: -89.623 }, // Latitud y longitud de Mérida, Yucatán
+        zoom: 12,
+    });
+
+    const marker = new google.maps.Marker({
+        position: { lat: 20.967, lng: -89.623 },
+        map: map,
+        title: "Ubicación de la agencia de autos"
     });
 });

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopCar México - Tu Camino, Nuestro Compromiso</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Animate.css desde CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Estilos Personalizados -->
+    <style>
+        .car-container-bg {
+            background: url('../car-sales-website/img/Fondo/fibra.png') no-repeat center center;
+            background-size: cover;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card-body-H {
+            padding: 15px;
+        }
+
+        .custom-section {
+            padding: 50px 0;
+        }
+
+        .car-card {
+            margin-bottom: 30px;
+        }
+
+        .car-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card {
+            border: none;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 15px;
+            background: #6ba5db;
+            color: #f6f7f8;
+        }
+
+        .card-title,
+        .card-text {
+            color: #f6f7f8;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1);
+        }
+
+        .navbar {
+            background-color: #306391;
+        }
+
+        .navbar-nav .nav-link {
+            color: #f6f7f8;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #6ba5db;
+        }
+
+        .custom-section.text-center.bg-light {
+            background-color: #f6f7f8;
+            color: #0f2f5c;
+        }
+
+        .custom-section.bg-light {
+            background-color: #f6f7f8;
+        }
+
+        .custom-section h1,
+        .custom-section h2,
+        .custom-section p,
+        .custom-section label {
+            color: #0f2f5c;
+        }
+
+        .custom-section .btn-primary {
+            background-color: #306391;
+            border-color: #306391;
+        }
+
+        .custom-section .btn-primary:hover {
+            background-color: #1e507b;
+            border-color: #1e507b;
+        }
+
+        .whatsapp-link {
+            display: flex;
+            align-items: center;
+        }
+
+        .whatsapp-link i {
+            margin-right: 8px;
+        }
+
+        /* Compensar el espacio para el contenido debajo de la barra de navegación fija */
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="#">TopCar México</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#compra">Compra</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#preguntas-frecuentes">Preguntas Frecuentes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#quienes-somos">Quiénes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="carDetailsModal" tabindex="-1" aria-labelledby="carDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carDetailsModalLabel">Detalles del Auto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 id="carName"></h5>
+                    <div id="carImagesCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" id="carImages"></div>
+                        <a class="carousel-control-prev" href="#carImagesCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carImagesCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <p id="carDescription" class="mt-3"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="custom-section text-center bg-light">
+        <div class="container">
+            <h1 class="display-4 animate__animated animate__fadeInDown">Bienvenido a TopCar México</h1>
+            <p class="lead animate__animated animate__fadeInUp">Tu Camino, Nuestro Compromiso</p>
+        </div>
+    </section>
+
+    <!-- Sección de Compra -->
+    <section id="compra" class="custom-section car-container-bg">
+        <div class="container ">
+            <h2 class="text-center animate__animated animate__fadeInDown" style="color: white;">Autos Disponibles</h2>
+            <div class="row" id="car-container">
+                <!-- Cards de autos generadas dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Preguntas Frecuentes -->
+    <section id="preguntas-frecuentes" class="custom-section bg-light">
+        <div class="container">
+            <h2 class="text-center animate__animated animate__fadeInDown">Preguntas Frecuentes</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                ¿Cómo puedo comprar un auto?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#faqAccordion">
+                        <div class="card-body-H">
+                            Puedes comprar un auto visitando nuestra sección de compra, eligiendo el auto que deseas, y
+                            siguiendo las instrucciones para completar tu compra.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                ¿Qué métodos de pago aceptan?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body-H">
+                            Aceptamos diversos métodos de pago, incluyendo transferencias bancarias, tarjetas de crédito
+                            y débito, y pagos en efectivo en nuestras sucursales.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                ¿Ofrecen financiamiento?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body-H">
+                            Sí, ofrecemos planes de financiamiento flexibles para adaptarse a tus necesidades. Contacta
+                            con nuestro equipo de ventas para más detalles.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                ¿Puedo hacer una prueba de manejo?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                        <div class="card-body-H">
+                            Sí, puedes agendar una prueba de manejo contactando a nuestro equipo de ventas. Estaremos
+                            encantados de asistirte en todo lo necesario.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                ¿Ofrecen garantía en los autos?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                        <div class="card-body-H">
+                            Sí, todos nuestros autos vienen con garantía para asegurar tu tranquilidad y satisfacción.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Quiénes Somos -->
+    <section id="quienes-somos" class="custom-section">
+        <div class="container">
+            <h2 class="text-center animate__animated animate__fadeInDown">Quiénes Somos</h2>
+            <p class="text-center animate__animated animate__fadeInUp">Somos una empresa dedicada a la venta de autos de
+                alta calidad. Nuestro compromiso es proporcionar a nuestros clientes vehículos confiables y un servicio
+                excepcional.</p>
+            <div class="row">
+                <div class="col-md-4 team-member animate__animated animate__zoomIn">
+                    <img src="img/team/member1.jpg">
+                    <h4>Juan Pérez</h4>
+                    <p>CEO y Fundador</p>
+                    <p>Con más de 20 años de experiencia en la industria automotriz, Juan lidera nuestro equipo con una
+                        visión clara y un compromiso con la excelencia.</p>
+                </div>
+                <div class="col-md-4 team-member animate__animated animate__zoomIn" style="animation-delay: 0.2s;">
+                    <img src="img/team/member2.jpg">
+                    <h4>María López</h4>
+                    <p>Directora de Ventas</p>
+                    <p>María es nuestra experta en ventas, siempre lista para ayudar a los clientes a encontrar el auto
+                        perfecto.</p>
+                </div>
+                <div class="col-md-4 team-member animate__animated animate__zoomIn" style="animation-delay: 0.4s;">
+                    <img src="img/team/member3.jpg">
+                    <h4>Carlos Martínez</h4>
+                    <p>Jefe de Servicio</p>
+                    <p>Carlos garantiza que todos los vehículos sean inspeccionados y mantenidos con los más altos
+                        estándares de calidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="custom-section bg-light">
+        <div class="container">
+            <h2 class="text-center animate__animated animate__fadeInDown">Contacto</h2>
+            <p class="text-center animate__animated animate__fadeInUp" style="font-size: 13px;">Para Reservar una cita,
+                llama o envia un Whats App a los siguientes numeros:</p>
+            <div class="row">
+                <div class="col-md-6 animate__animated animate__fadeInLeft">
+                    <h3>Oficina Central</h3>
+                    <p><strong>Dirección:</strong> Calle Capuchinas #259 Col.Evolucion CD.Nezahualcoyotl</p>
+                    <p><strong>Teléfono:</strong> (55) 26-48-70-70</p>
+                    <p><strong>WhatsApp:</strong>
+                        <a href="https://wa.me/525511970754?text=Estoy%20interesado%20en%20un%20veh%C3%ADculo%20existente%20en%20su%20inventario%2C%20me%20podr%C3%ADas%20dar%20m%C3%A1s%20informes%3F"
+                            class="whatsapp-link">
+                            <i class="fab fa-whatsapp"></i> 55-11-97-07-54
+                        </a>
+                    </p>
+                    <p><strong>Correo Electrónico:</strong> crsmexico1@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

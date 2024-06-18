@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
             estado: "Seminuevo",
             inventario: "Disponible",
             kilometraje: "105,000 km",
-            precio: "140,000 MXN",
+            precio: "65,900 MXN",
             images: [
                 "WhatsApp Image 2024-06-13 at 11.19.05 PM.jpeg",
                 "WhatsApp Image 2024-06-13 at 11.19.06 PM.jpeg",
@@ -448,11 +448,11 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Honda City",
-            description_name: "Honda City",
+            description_name: "Honda City 2016",
             estado: "Seminuevo",
             inventario: "Disponible",
-            kilometraje: "105,000 km",
-            precio: "$59,900 MXN",
+            kilometraje: "130,000 km",
+            precio: "$109,000 MXN",
             images: [
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (46).jpeg",
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (47).jpeg",
@@ -504,7 +504,7 @@ document.addEventListener("DOMContentLoaded", function () {
 `,
             estado: "Seminuevo",
             inventario: "Disponible",
-            kilometraje: "89,500 km",
+            kilometraje: "80,000 km",
             precio: "$89,500 MXN",
             images: [
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (17).jpeg",

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TopCars México - Tu Camino, Nuestro Compromiso</title>
-    <!-- Bootstrap CSS -->
+    <meta name="description"
+        content="Encuentra los mejores coches nuevos y usados en TopCars México. Tu camino, nuestro compromiso.">
+    <meta name="keywords" content="coches, autos, compra de autos, autos usados, coches nuevos, TopCars México">
+    <meta name="author" content="TopCars México">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Animate.css desde CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Estilos Personalizados -->
     <style>
         .header-banner {
             position: relative;
@@ -26,16 +26,12 @@
         .banner-date {
             position: absolute;
             bottom: 10px;
-            /* Ajusta este valor según sea necesario */
             right: 10px;
-            /* Ajusta este valor según sea necesario */
             background-color: rgba(0, 0, 0, 0.5);
-            /* Fondo semitransparente */
             color: white;
             padding: 5px 10px;
             border-radius: 5px;
             font-size: 14px;
-            /* Ajusta el tamaño de la fuente según sea necesario */
         }
 
         .car-container-bg {
@@ -134,7 +130,6 @@
             margin-right: 8px;
         }
 
-        /* Compensar el espacio para el contenido debajo de la barra de navegación fija */
         body {
             padding-top: 70px;
         }
@@ -211,6 +206,7 @@
     <header class="header-banner">
         <img src="./img/Fondo/FondoHeader.jpg" alt="TopCars Mexico Banner" class="img-fluid">
     </header>
+
     <!-- Sección de Inicio -->
     <section id="inicio" class="custom-section text-center bg-light">
         <div class="container">
@@ -254,11 +250,14 @@
                 <div class="card">
                     <div class="card-header" id="headingTwo">
                         <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                                data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                ¿Qué métodos de pago aceptan?
-                            </button>
-                        </h2>
+                            <button class="btn btn-link btn">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        ¿Qué métodos de pago aceptan?
+                                    </button>
+                                </h2>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
                         <div class="card-body-H">
@@ -271,7 +270,7 @@
                     <div class="card-header" id="headingThree">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                                data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 ¿Ofrecen financiamiento?
                             </button>
                         </h2>
@@ -287,7 +286,7 @@
                     <div class="card-header" id="headingFour">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                                data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                 ¿Puedo hacer una prueba de manejo?
                             </button>
                         </h2>
@@ -303,7 +302,7 @@
                     <div class="card-header" id="headingFive">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                                data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                 ¿Ofrecen garantía en los autos?
                             </button>
                         </h2>
@@ -353,11 +352,11 @@
         <div class="container">
             <h2 class="text-center animate__animated animate__fadeInDown">Contacto</h2>
             <p class="text-center animate__animated animate__fadeInUp" style="font-size: 13px;">Para Reservar una cita,
-                llama o envia un Whats App a los siguientes numeros:</p>
+                llama o envia un Whats App a los siguientes números:</p>
             <div class="row">
                 <div class="col-md-6 animate__animated animate__fadeInLeft">
                     <h3>Oficina Central</h3>
-                    <p><strong>Dirección:</strong> Calle Capuchinas #261 Col.Evolucion Municipio.Nezahualcoyotl </p>
+                    <p><strong>Dirección:</strong> Calle Capuchinas #261 Col.Evolución Municipio.Nezahualcóyotl </p>
                     <p><strong>Teléfono:</strong> (55) 26-48-70-70</p>
                     <p><strong>WhatsApp:</strong>
                         <a href="https://wa.me/525611970754?text=Estoy%20interesado%20en%20un%20veh%C3%ADculo%20existente%20en%20su%20inventario%2C%20me%20podr%C3%ADas%20dar%20m%C3%A1s%20informes%3F"
@@ -365,9 +364,7 @@
                             <i class="fab fa-whatsapp"></i> 56-11-97-07-54
                         </a>
                     </p>
-
                     <p><strong>Correo Electrónico:</strong> crsmexico1@gmail.com</p>
-                    <!-- Aquí se añadirá el mapa -->
                     <div id="map"></div>
                 </div>
             </div>
@@ -378,7 +375,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Script personalizado -->
     <script src="js/script.js"></script>
 </body>
 

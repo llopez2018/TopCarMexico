@@ -675,8 +675,8 @@ document.addEventListener("DOMContentLoaded", function () {
         `,
             estado: "Seminuevo",
             inventario: "Disponible",
-            kilometraje: "105,000 km",
-            precio: "$215,900 MXN",
+            kilometraje: "40,000 km",
+            precio: "$204,900 MXN",
             images: [
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (41).jpeg",
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (42).jpeg",
@@ -794,8 +794,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         ,
         {
-            name: "Toyota Odisea",
-            description_name: "Toyota Odisea 2019",
+            name: "Toyota Sienna",
+            description_name: "Toyota Sienna 2012",
             description_vehiculo: `
         <strong>Descripción detallada del Toyota Odisea 2019:</strong><br><br>
         <strong>Exterior:</strong><br>
@@ -849,8 +849,8 @@ document.addEventListener("DOMContentLoaded", function () {
     `,
             estado: "Seminuevo",
             inventario: "Disponible",
-            kilometraje: "105,000 km",
-            precio: "$59,900 MXN",
+            kilometraje: "95,000 km",
+            precio: "$125,900 MXN",
             images: [
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (28).jpeg",
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (29).jpeg",
@@ -861,7 +861,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ,
         {
             name: "Tucson",
-            description_name: "Tucson 2019",
+            description_name: "Tucson 2017",
             description_vehiculo: `
                 <strong>Descripción detallada del Tucson 2019:</strong><br><br>
                 <strong>Exterior:</strong><br>
@@ -969,7 +969,7 @@ document.addEventListener("DOMContentLoaded", function () {
             estado: "Seminueva",
             inventario: "Disponible",
             kilometraje: "89,000 km",
-            precio: "$187,000 MXN",
+            precio: "$280,000 MXN",
             images: [
                 "WhatsApp Image 2024-06-13 at 11.19.07 PM (40).jpeg",
                 "WhatsApp Image 2024-06-13 at 11.19.07 PM (41).jpeg",

@@ -56,8 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
             - Control de crucero adaptativo<br>
             - Sistema de frenado automático de emergencia
         `,
+
+
+
             estado: "Seminueva",
-            inventario: "Disponible",
+            inventario: "VENDIDA",
             kilometraje: "60,000 km",
             precio: "$450,000 MXN",
             images: [
@@ -121,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             - Control de crucero automático
         `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "VENDIDO",
             kilometraje: "150,000 km",
             precio: "$87,000 MXN",
             images: [
@@ -186,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
             - Sistema de frenado automático de emergencia
         `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "VENDIDO",
             kilometraje: "79,000 km",
             precio: "$379,000 MXN",
             images: [
@@ -244,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 - Asistente de estacionamiento
             `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "APARTADO",
             kilometraje: "25,000 km",
             precio: "$279,000 MXN",
             images: [
@@ -298,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
             - Control de crucero automático
         `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "VENDIDO",
             kilometraje: "105,000 km",
             precio: "65,900 MXN",
             images: [
@@ -366,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function () {
     - Asistente de estacionamiento automático
 `,
             estado: "Siniestrada por Reparar (Arrancando y Caminando)",
-            inventario: "Disponible",
+            inventario: "APARTADO",
             kilometraje: "42,000 km",
             precio: "$480,000 MXN",
             images: [
@@ -436,7 +439,7 @@ document.addEventListener("DOMContentLoaded", function () {
     - Asistente de estacionamiento automático
 `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "APARTADO",
             kilometraje: "119,000 km",
             precio: "$129,000 MXN",
             images: [
@@ -450,7 +453,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name: "Honda City",
             description_name: "Honda City 2016",
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "APARTADO",
             kilometraje: "130,000 km",
             precio: "$109,000 MXN",
             images: [
@@ -503,7 +506,7 @@ document.addEventListener("DOMContentLoaded", function () {
     - Control de crucero automático
 `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "VENDIDO",
             kilometraje: "80,000 km",
             precio: "$89,500 MXN",
             images: [
@@ -559,7 +562,7 @@ document.addEventListener("DOMContentLoaded", function () {
     - Control de crucero adaptativo
 `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "VENDIDO",
             kilometraje: "119,000 km",
             precio: "$105,000 MXN",
             images: [
@@ -619,9 +622,9 @@ document.addEventListener("DOMContentLoaded", function () {
     - Asistente de estacionamiento automático
 `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "VENDIDO",
             kilometraje: "39,000 km",
-            precio: "$269,000 MXN",
+            precio: "$269,000ß MXN",
             images: [
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (23).jpeg",
                 "WhatsApp Image 2024-06-13 at 11.19.08 PM (24).jpeg",
@@ -632,7 +635,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Mazda 2",
-            description_name: "Mazda 2 2022",
+            description_name: "Mazda 2  2022",
             description_vehiculo: `
         <strong>Descripción detallada del Mazda 2 2022:</strong><br><br>
         <strong>Exterior:</strong><br>
@@ -729,7 +732,7 @@ document.addEventListener("DOMContentLoaded", function () {
     - Control de crucero automático
 `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "APARTADO",
             kilometraje: "130,200 km",
             precio: "$142,000 MXN",
             images: [
@@ -782,7 +785,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 - Control de crucero automático
             `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "VENDIDO",
             kilometraje: "123,000 km",
             precio: "$89,000 MXN",
             images: [
@@ -848,7 +851,7 @@ document.addEventListener("DOMContentLoaded", function () {
         - Asistente de estacionamiento automático
     `,
             estado: "Seminuevo",
-            inventario: "Disponible",
+            inventario: "APARTADO",
             kilometraje: "95,000 km",
             precio: "$125,900 MXN",
             images: [
@@ -910,7 +913,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 - Asistente de estacionamiento automático
             `,
             estado: "Seminueva",
-            inventario: "Disponible",
+            inventario: "APARTADO",
             kilometraje: "49,000 km",
             precio: "$247,000 MXN",
             images: [
@@ -967,7 +970,7 @@ document.addEventListener("DOMContentLoaded", function () {
             - Control de crucero adaptativo
         `,
             estado: "Seminueva",
-            inventario: "Disponible",
+            inventario: "VENDIDO",
             kilometraje: "89,000 km",
             precio: "$280,000 MXN",
             images: [
